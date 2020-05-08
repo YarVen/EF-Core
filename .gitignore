@@ -3,3 +3,11 @@
 ################################################################################
 
 /SamuraiApp/Tests/bin/Debug/netcoreapp3.1
+/SamuraiApp/Tests/obj
+/SamuraiApp/SamuraiApp.Domain/bin/Debug/netstandard2.0
+/SamuraiApp/SamuraiApp.Domain/obj
+/SamuraiApp/SamuraiApp.Data/bin/Debug/netstandard2.1
+/SamuraiApp/SamuraiApp.Data/obj
+/SamuraiApp/ConsoleApp/bin/Debug/netcoreapp3.1
+/SamuraiApp/ConsoleApp/obj
+/SamuraiApp/.vs/SamuraiApp
