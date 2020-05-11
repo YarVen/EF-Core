@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamuraiApp.Domain", "SamuraiApp.Domain\SamuraiApp.Domain.csproj", "{D18B5F7C-C1C9-4EAA-BF02-A2665FAC7B1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamuraiApp.Domain", "SamuraiApp.Domain\SamuraiApp.Domain.csproj", "{D18B5F7C-C1C9-4EAA-BF02-A2665FAC7B1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamuraiApp.Data", "SamuraiApp.Data\SamuraiApp.Data.csproj", "{6F95ACEB-8ADB-425F-8615-0857358676FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamuraiApp.Data", "SamuraiApp.Data\SamuraiApp.Data.csproj", "{6F95ACEB-8ADB-425F-8615-0857358676FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{150FD800-3331-4B9B-8139-FBB985A78672}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{150FD800-3331-4B9B-8139-FBB985A78672}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{7AE181C4-4667-482C-A369-3BC0267D2F0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{7AE181C4-4667-482C-A369-3BC0267D2F0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamuraiAPI", "SamuraiAPI\SamuraiAPI.csproj", "{8785CFEF-FF1D-4F40-B0AF-D59858882E64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7AE181C4-4667-482C-A369-3BC0267D2F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AE181C4-4667-482C-A369-3BC0267D2F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AE181C4-4667-482C-A369-3BC0267D2F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8785CFEF-FF1D-4F40-B0AF-D59858882E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8785CFEF-FF1D-4F40-B0AF-D59858882E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8785CFEF-FF1D-4F40-B0AF-D59858882E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8785CFEF-FF1D-4F40-B0AF-D59858882E64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

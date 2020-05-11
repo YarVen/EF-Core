@@ -24,4 +24,4 @@ Nuget-packages:
 
 Powershell command:
 scaffold-dbcontext -provider Microsoft.EntityFrameworkCore.SqlServer
-				   -connection "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = SamuraiAppData"	
+				   -connection "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = SamuraiAppData"	   
