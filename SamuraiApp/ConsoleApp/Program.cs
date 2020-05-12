@@ -9,8 +9,7 @@ namespace ConsoleApp
 {
     internal class Program
     {
-        //private static SamuraiContext _context = new SamuraiContext();
-        private static SamuraiContext _context = new SamuraiContext(new DbContextOptions<SamuraiContext>());
+        private static SamuraiContext _context = new SamuraiContext();
 
         private static void Main(string[] args)
         {
@@ -110,7 +109,7 @@ namespace ConsoleApp
             {
                 Text = "Now that I saved you"
             });
-            using (var newContextInstance = new SamuraiContext(new DbContextOptions<SamuraiContext>()))
+            using (var newContextInstance = new SamuraiContext())
             {
                 newContextInstance.Samurais.Attach(samurai);
                 newContextInstance.SaveChanges();
@@ -135,7 +134,7 @@ namespace ConsoleApp
         {
             var battle = _context.Battles.AsNoTracking().FirstOrDefault();
             battle.EndDate = new DateTime(1560, 06, 30);
-            using (var newContextInstance = new SamuraiContext(new DbContextOptions<SamuraiContext>()))
+            using (var newContextInstance = new SamuraiContext())
             {
                 newContextInstance.Battles.Update(battle);
                 newContextInstance.SaveChanges();

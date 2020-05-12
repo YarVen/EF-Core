@@ -6,7 +6,14 @@ namespace SamuraiApp.Data
 {
     public class SamuraiContext : DbContext
     {
-        //For Web API
+        //For Tests
+        public SamuraiContext()
+        { }
+
+        public SamuraiContext(DbContextOptions options) : base(options)
+        { }
+
+        //For Web API 
         public SamuraiContext(DbContextOptions<SamuraiContext> options) : base(options)
         {
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
@@ -19,22 +26,26 @@ namespace SamuraiApp.Data
         public DbSet<SamuraiBattleStat> SamuraiBattleStats { get; set; }
 
         //For Console App
-        //private static readonly ILoggerFactory ConsoleLoggerFactory
-        //    = LoggerFactory.Create(builder =>
-        //{
-        //    builder
-        //        .AddFilter((category, level) =>
-        //            category == DbLoggerCategory.Database.Command.Name &&
-        //            level == LogLevel.Information)
-        //        .AddConsole();
-        //});
+        private static readonly ILoggerFactory ConsoleLoggerFactory
+            = LoggerFactory.Create(builder =>
+        {
+            builder
+                .AddFilter((category, level) =>
+                    category == DbLoggerCategory.Database.Command.Name &&
+                    level == LogLevel.Information)
+                .AddConsole();
+        });
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder
-        //        .UseLoggerFactory(ConsoleLoggerFactory)
-        //        .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = SamuraiAppData");
-        //}
+        //For Console App
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder
+                    .UseLoggerFactory(ConsoleLoggerFactory)
+                    .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = SamuraiAppData");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
